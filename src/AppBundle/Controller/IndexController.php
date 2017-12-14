@@ -9,15 +9,11 @@ use Symfony\Component\HttpFoundation\Response;
 
 class IndexController extends Controller
 {
-    /**
-     * @Route("/", name="index")
-     */
     public function indexAction(Request $request)
     {
-        $number = mt_rand(0, 100);
 
         return $this->render(
-            'index.html.twig'
+            'base.html.twig'
         );
     }
 }

@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new AppBundle\AppBundle(),
 
             new FOS\UserBundle\FOSUserBundle(),
+            new Symfony\Bundle\AsseticBundle\AsseticBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
@@ -42,22 +43,12 @@ class AppKernel extends Kernel
 
     public function getCacheDir()
     {
-        if (in_array($this->environment, array('dev', 'test'))) {
-            return '/dev/shm/easyProjectEvaluation/cache/' .  $this->environment;
-        }
-
-        return parent::getCacheDir();
-//        return dirname(__DIR__).'/var/cache/'.$this->getEnvironment();
+        return dirname(__DIR__).'/var/cache/'.$this->getEnvironment();
     }
 
     public function getLogDir()
     {
-        if (in_array($this->environment, array('dev', 'test'))) {
-            return '/dev/shm/easyProjectEvaluation/logs';
-        }
-
-        return parent::getLogDir();
-//        return dirname(__DIR__).'/var/logs';
+        return dirname(__DIR__).'/var/logs';
     }
 
     public function registerContainerConfiguration(LoaderInterface $loader)
