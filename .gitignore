@@ -1,23 +1,7 @@
-.idea/
 
-
-
-
-.idea
-/app/config/parameters.yml
-/build/
-/bin/phpunit
-/phpunit.xml
-/var/*
-!/var/cache
-/var/cache/*
-!var/cache/.gitkeep
-!/var/logs
-/var/logs/*
-!var/logs/.gitkeep
-!/var/sessions
-/var/sessions/*
-!var/sessions/.gitkeep
+###> symfony/framework-bundle ###
+/.env
+/public/bundles/
+/var/
 /vendor/
-/web/bundles/
-/app/cache
+###< symfony/framework-bundle ###
